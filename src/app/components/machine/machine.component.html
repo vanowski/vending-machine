@@ -5,12 +5,12 @@
       <span class="machine-item-name">{{ item.name }}</span>
       <span class="machine-item-amount">{{ item.amount }}</span>
       <span class="machine-item-button">
-        <button class="machine-button" (click)="buy(item.id)">Buy</button>
+        <button class="machine-button" (click)="buy(item.id)" [disabled]="item.amount === 0">Buy</button>
       </span>
     </div>
   </section>
   <section class="machine-payment">
-    <div class="machine-payment-info">€ {{ credit / 100 }}</div>
+    <div class="machine-payment-credit">€ {{ credit / 100 }}</div>
     <button class="machine-button machine-button_payment" (click)="addCredit(200)">2€</button>
     <button class="machine-button machine-button_payment" (click)="addCredit(100)">1€</button>
     <button class="machine-button machine-button_payment" (click)="addCredit(50)">50¢</button>
@@ -19,5 +19,8 @@
     <button class="machine-button machine-button_payment" (click)="addCredit(5)">5¢</button>
     <button class="machine-button machine-button_payment" (click)="addCredit(1)">1¢</button>
     <button class="machine-button" (click)="getChange()">Get Change</button>
+  </section>
+  <section class="machine-message">
+    <div class="machine-message__text">{{ message }}</div>
   </section>
 </main>

@@ -29,7 +29,7 @@ export class InMemoryDataService implements InMemoryDbService {
         name: 'Fanta',
         price: 208,
         priceNice: '€ 2,08',
-        amount: 20
+        amount: 1
       },
       {
         id: 5,
@@ -40,46 +40,13 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 6,
-        name: 'Rees\'s',
+        name: 'Reese\'s',
         price: 100,
         priceNice: '€ 1',
         amount: 3
       }
     ];
 
-    const coins = [
-      {
-        id: 1,
-        value: 100,
-        amount: 5
-      },
-      {
-        id: 2,
-        value: 50,
-        amount: 3
-      },
-      {
-        id: 3,
-        value: 25,
-        amount: 4
-      },
-      {
-        id: 4,
-        value: 10,
-        amount: 20
-      },
-      {
-        id: 5,
-        value: 5,
-        amount: 4
-      },
-      {
-        id: 6,
-        value: 1,
-        amount: 30
-      }
-    ];
-
-    return { items, coins };
+    return { items };
   }
 }

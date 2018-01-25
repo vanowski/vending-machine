@@ -1,4 +1,8 @@
-export const INITIAL_COINS = [
+export const COINS_INITIAL = [
+  {
+    value: 200,
+    amount: 0
+  },
   {
     value: 100,
     amount: 5
@@ -13,7 +17,7 @@ export const INITIAL_COINS = [
   },
   {
     value: 10,
-    amount: 20
+    amount: 5
   },
   {
     value: 5,

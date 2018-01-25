@@ -6,7 +6,7 @@ import { of } from 'rxjs/observable/of';
 import { catchError } from 'rxjs/operators';
 
 import { ChangeService } from './change.service';
-import { Item } from './item';
+import { Item } from '../models/item';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -37,8 +37,12 @@ export class ItemsService {
     );
   }
 
-  releaseItem(id): Observable<Item> {
-    return this.http.delete<Item>(`${this.apiUrl}/${id}`, httpOptions)
+  releaseItem(item: Item): Observable<Item> {
+    if (item.amount > 0) {
+      item.amount--;
+    }
+
+    return this.http.put<Item>(this.apiUrl, item, httpOptions)
       .pipe(
         catchError(this.handleError<Item>('Releasing item'))
     );

@@ -4,19 +4,17 @@ import { HttpClientModule }    from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
-import { InMemoryDataService }  from './in-memory-data.service';
-import { ItemsService }  from './items.service';
-import { ChangeService }  from './change.service';
+import { InMemoryDataService }  from './services/in-memory-data.service';
+import { ItemsService }  from './services/items.service';
+import { ChangeService }  from './services/change.service';
 
 import { AppComponent } from './app.component';
 import { MachineComponent } from './components/machine/machine.component';
-import { RefillComponent } from './refill/refill.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MachineComponent,
-    RefillComponent
+    MachineComponent
   ],
   imports: [
     BrowserModule,

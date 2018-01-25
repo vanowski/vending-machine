@@ -1,0 +1,23 @@
+<main>
+  <section class="machine-items">
+    <div *ngFor="let item of items" class="machine-item">
+      <span class="machine-item-price">{{ item.priceNice }}</span>
+      <span class="machine-item-name">{{ item.name }}</span>
+      <span class="machine-item-amount">{{ item.amount }}</span>
+      <span class="machine-item-button">
+        <button class="machine-button" (click)="buy(item.id)">Buy</button>
+      </span>
+    </div>
+  </section>
+  <section class="machine-payment">
+    <div class="machine-payment-info">€ {{ credit / 100 }}</div>
+    <button class="machine-button machine-button_payment" (click)="addCredit(200)">2€</button>
+    <button class="machine-button machine-button_payment" (click)="addCredit(100)">1€</button>
+    <button class="machine-button machine-button_payment" (click)="addCredit(50)">50¢</button>
+    <button class="machine-button machine-button_payment" (click)="addCredit(25)">25¢</button>
+    <button class="machine-button machine-button_payment" (click)="addCredit(10)">10¢</button>
+    <button class="machine-button machine-button_payment" (click)="addCredit(5)">5¢</button>
+    <button class="machine-button machine-button_payment" (click)="addCredit(1)">1¢</button>
+    <button class="machine-button" (click)="getChange()">Get Change</button>
+  </section>
+</main>

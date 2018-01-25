@@ -1,0 +1,8 @@
+@import "./constants";
+
+.machine-button {
+  border-width: 1px;
+  border-radius: $spacing;
+  padding: $spacing;
+  border: 1px solid #c4dac2;
+}

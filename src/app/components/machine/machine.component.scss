@@ -1,0 +1,67 @@
+@import "../common/scss/constants";
+@import "../common/scss/button";
+
+$spacing: 6px;
+
+main,
+section {
+  width: 500px;
+  margin: 0 auto;
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.machine-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.machine-item {
+  padding: 20px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.machine-item-name {
+  width: 50%;
+  padding: $spacing;
+  padding-left: $spacing * 4;
+}
+
+.machine-item-price,
+.machine-item-button,
+.machine-item-amount {
+  width: 10%;
+  padding: $spacing;
+}
+
+.machine-item-amount {
+  border-radius: $spacing;
+  color: #9c9090;
+  background: #e4e4e4;
+  text-align: center;
+}
+
+.machine-item-price {
+  border-radius: $spacing 0 0 $spacing;
+  text-align: center;
+  background: #a7e4a1;
+}
+
+.machine-payment {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.machine-payment-info {
+  width: 10%;
+}
+
+.machine-change {
+  display: flex;
+  justify-content: center;
+}
